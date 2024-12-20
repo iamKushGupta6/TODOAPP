@@ -1,0 +1,15 @@
+<label>TASK:</label>
+<input placeholder="enter task" type="text" [(ngModel)]="taskTodo"/>
+<label>Date:</label>
+<input type="date" [(ngModel)]="taskDate"/>
+<button (click)="createTask()" >ADD TASK</button>
+<div>
+    <h1>Tasks</h1>
+    <ul>
+        <li *ngFor="let task of allTask">
+            {{task.id}} {{task.task}} {{task.date}}
+            <button>Delete</button>
+
+        </li>
+    </ul>
+</div>
